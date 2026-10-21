@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+build/
+dist/
+*.egg-info/
+
+# Data and model weights (live on Google Drive)
+data/
+models/
+*.pt
+*.pth
+*.onnx
+
+# Generated outputs
+outputs/
+runs/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Secrets
+.env
+
+# OS
+.DS_Store
