@@ -7,7 +7,14 @@ authors = [
     { name = "Richie", email = "158501974+RichieBuilds@users.noreply.github.com" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "imagehash>=4.3.2",
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.4",
+    "pandas>=3.1.0",
+    "pillow>=13.0.0",
+    "scikit-learn>=1.9.1",
+]
 
 [project.scripts]
 semproject-mlengine = "semproject_mlengine:main"
