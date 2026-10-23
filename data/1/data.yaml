@@ -1,9 +1,10 @@
-train: ../train/images
-val: ../valid/images
-test: ../test/images
+train: train/images
+val: valid/images
+test: test/images
 
 nc: 1
-names: ['pothole']
+names:
+  0: pothole
 
 roboflow:
   workspace: vasanthakumar662005
