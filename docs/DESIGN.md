@@ -55,4 +55,7 @@ most. We check this in our results.
 [4] Ultralytics, "YOLO11 vs. YOLO26," Ultralytics Docs (accessed Oct 2026).
     https://docs.ultralytics.com/compare/yolo11-vs-yolo26
 
-Dataset and license details: see CREDITS.md.
+Dataset attribution: the original export records CC BY 4.0, Roboflow workspace
+`vasanthakumar662005`, project `pothole-pq3lu`, version 1. See
+`data/1/README.roboflow.txt` and `data/1/data.yaml` for the retained source metadata.
+See [MODEL.md](MODEL.md) for the current trained checkpoint and dataset splits.
