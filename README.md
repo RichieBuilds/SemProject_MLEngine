@@ -1,80 +1,52 @@
-# SemProject ML Engine
+# RoadWatch ML Engine
 
-YOLO11-based pothole detection project.
+YOLO11s pothole detection using the cleaned-v3 trained checkpoint.
 
-## Requirements
+## Setup for teammates
 
-- Python 3.13 or newer
-- `uv` for environment and dependency management
-- An NVIDIA GPU is recommended for training; CPU inference is supported
-
-## Install Dependencies
-
-From the repository root, run:
+Run commands from this repository's root with Python 3.13+ and uv installed:
 
 ```bash
 uv sync
 ```
 
-This installs the dependencies declared in `pyproject.toml`, including:
+Download the cleaned-v3 **best.pt** from the team's Google Drive and place it
+at `models/best.pt`. Git does not distribute model weights. Keep it as one file;
+do not unzip it. See [model setup and results](docs/MODEL.md) for the Drive
+location, checksum, training details, and evaluation instructions.
 
-- `ultralytics` for YOLO11
-- `torch` and `torchvision` for model execution
-- `numpy`, `pandas`, `scikit-learn`, `pillow`, `matplotlib`, and `imagehash`
+## Predict
 
-If `uv` is not available, install the main packages with:
-
-```bash
-python -m pip install ultralytics imagehash matplotlib numpy pandas pillow scikit-learn
-```
-
-## Trained Model
-
-Place the trained checkpoint at:
-
-```text
-models/best.pt
-```
-
-The `models/` directory and model files are ignored by Git because trained
-weights should be stored locally or in Google Drive, not committed to the
-repository.
-
-## Run Inference
-
-Use the trained pothole model on an image:
+The detector uses `models/best.pt` automatically:
 
 ```bash
-uv run semproject-mlengine predict path/to/image.jpg \
-  --model models/best.pt \
-  --save
+uv run semproject-mlengine predict path/to/image.jpg --device cpu --save
 ```
 
-For CPU inference:
+For a different checkpoint, add `--model path/to/checkpoint.pt`. The default
+checkpoint must exist; the detector does not fall back to generic weights.
+Annotated images go to `runs/predict/pothole/` (later runs may receive a numbered
+suffix). The printed count is the number of predicted boxes, not verified potholes.
 
-```bash
-uv run semproject-mlengine predict path/to/image.jpg \
-  --model models/best.pt \
-  --device cpu \
-  --save
-```
+## Train and evaluate
 
-Annotated results are saved under `runs/predict/pothole/`.
+Open [the Colab notebook](train_yollo_collab.ipynb). It mounts Drive, extracts the
+cleaned-v3 ZIP, checks all three splits, trains from pretrained `yolo11s.pt`, saves
+checkpoints to Drive, and evaluates the held-out test split. It does not use the
+original `data/1` splits. A GPU is needed for practical training.
 
-## Evaluate the Model
+If Colab resets, rerun setup through the dataset and GPU checks, then load the
+saved checkpoint for evaluation. Do not rerun training just to test a saved model.
 
-Evaluate the trained checkpoint on the test split:
+## Repository guide
 
-```bash
-uv run yolo detect val \
-  model=models/best.pt \
-  data=data/1/data.yaml \
-  split=test
-```
+- `src/semproject_mlengine/`: inference wrapper and command-line entry point.
+- `tests/`: lightweight integration tests; run `uv run python -m unittest discover -s tests -v`.
+- `notebooks/roadwatch_dataset_cleaning.ipynb`: split decisions and data checks.
+- `docs/MODEL.md`: checkpoint distribution, recorded results, and limitations.
+- `docs/DESIGN.md`: detector rationale and references.
+- `reports/dataset_review/`: evidence retained from the cleaning review.
 
-## Train on Google Colab
-
-Open [`train_yollo_collab.ipynb`](train_yollo_collab.ipynb) in Google Colab.
-The notebook clones the `dek_Engine` branch, verifies the dataset, trains
-YOLO11s, evaluates the test split, and saves the best checkpoint to Google
-Drive. Select a GPU runtime before running the training cell.
+Local checkpoints, cleaned images, and generated predictions are ignored by Git.
+The original dataset is already tracked for historical reference; it is not the
+training split for the cleaned-v3 model.
