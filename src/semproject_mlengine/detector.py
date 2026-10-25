@@ -5,7 +5,7 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 
-DEFAULT_MODEL = "yolo11s.pt"
+DEFAULT_MODEL = "models/best.pt"
 
 
 class PotholeDetector:
@@ -33,6 +33,13 @@ class PotholeDetector:
     def model(self) -> Any:
         """Return the loaded Ultralytics model, loading it on first use."""
         if self._model is None:
+            if self.model_path == DEFAULT_MODEL and not Path(self.model_path).is_file():
+                raise FileNotFoundError(
+                    "Trained pothole checkpoint missing: models/best.pt. "
+                    "Run from the repository root and download the cleaned-v3 "
+                    "checkpoint as described in docs/MODEL.md, or pass --model PATH. "
+                    "Keep the checkpoint as one file; do not extract it."
+                )
             from ultralytics import YOLO
 
             self._model = YOLO(self.model_path)
@@ -56,6 +63,6 @@ class PotholeDetector:
         if self.device is not None:
             predict_options["device"] = self.device
         if save:
-            predict_options.update(project=str(project), name=name)
+            predict_options.update(project=str(Path(project).resolve()), name=name)
         predict_options.update(options)
         return list(self.model.predict(**predict_options))
