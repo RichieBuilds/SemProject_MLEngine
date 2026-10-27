@@ -1,69 +1,45 @@
-# SemProject ML Engine
+# RoadWatch ML Engine
 
-YOLO11-based pothole detection project.
+YOLO11s pothole detection using the cleaned-v3 trained checkpoint.
 
-## Requirements
+## Setup for teammates
 
-- Python 3.13 or newer
-- `uv` for environment and dependency management
-- An NVIDIA GPU is recommended for training; CPU inference is supported
-
-## Install Dependencies
-
-From the repository root, run:
+Run commands from this repository's root with Python 3.13+ and `uv` installed:
 
 ```bash
 uv sync
 ```
 
-This installs the dependencies declared in `pyproject.toml`, including:
+Download the cleaned-v3 **best.pt** from the team's Google Drive and place it
+at `models/best.pt`. Git does not distribute model weights. Keep it as one file;
+do not unzip it. See [model setup and results](docs/MODEL.md) for the Drive
+location, checksum, training details, and evaluation instructions.
 
-- `ultralytics` for YOLO11
-- `torch` and `torchvision` for model execution
-- `numpy`, `pandas`, `scikit-learn`, `pillow`, `matplotlib`, and `imagehash`
+## Predict
 
-If `uv` is not available, install the main packages with:
-
-```bash
-python -m pip install ultralytics imagehash matplotlib numpy pandas pillow scikit-learn
-```
-
-## Trained Model
-
-Place the trained checkpoint at:
-
-```text
-models/best.pt
-```
-
-The `models/` directory and model files are ignored by Git because trained
-weights should be stored locally or in Google Drive, not committed to the
-repository.
-
-## Run Inference
-
-Use the trained pothole model on an image:
+The detector uses `models/best.pt` automatically:
 
 ```bash
-uv run semproject-mlengine predict path/to/image.jpg \
-  --model models/best.pt \
-  --save
+uv run semproject-mlengine predict path/to/image.jpg --device cpu --save
 ```
 
-For CPU inference:
+For a different checkpoint, add `--model path/to/checkpoint.pt`. The default
+checkpoint must exist; the detector does not fall back to generic weights.
+Annotated images go to `runs/predict/pothole/` (later runs may receive a numbered
+suffix). The printed count is the number of predicted boxes, not verified potholes.
 
-```bash
-uv run semproject-mlengine predict path/to/image.jpg \
-  --model models/best.pt \
-  --device cpu \
-  --save
-```
+## Train and evaluate
 
-Annotated results are saved under `runs/predict/pothole/`.
+Open [the Colab notebook](train_yollo_collab.ipynb). It mounts Drive, extracts
+the cleaned-v3 ZIP, checks all three splits, trains from pretrained `yolo11s.pt`,
+saves checkpoints to Drive, and evaluates the held-out test split. It does not
+use the original `data/1` splits. A GPU is needed for practical training.
 
-## Evaluate the Model
+If Colab resets, rerun setup through the dataset and GPU checks, then load the
+saved checkpoint for evaluation. Do not rerun training just to test a saved model.
 
-Create the local cleaned-data YAML as described in [MODEL.md](docs/MODEL.md), then evaluate the checkpoint on the test split:
+Create the local cleaned-data YAML as described in [MODEL.md](docs/MODEL.md),
+then evaluate the checkpoint on the test split:
 
 ```bash
 uv run yolo detect val \
@@ -72,14 +48,29 @@ uv run yolo detect val \
   split=test imgsz=640 device=cpu
 ```
 
-## Train on Google Colab
+## Repository guide
 
-The restored [cleaned-v3 training notebook](train_yollo_collab.ipynb) uses the externally supplied cleaned-v3 archive in Drive and Ultralytics 8.4.189. Original-split training code is preserved in [the notebook archive](notebooks/archive/train_original_split.ipynb). Start training only for a new explicitly planned experiment; do not retrain to replace evidence.
+- `src/semproject_mlengine/`: inference wrapper and command-line entry point.
+- `tests/`: lightweight integration tests; run `uv run python -m unittest discover -s tests -v`.
+- `notebooks/roadwatch_dataset_cleaning.ipynb`: split decisions and data checks.
+- `docs/MODEL.md`: checkpoint distribution, recorded results, and limitations.
+- `docs/DESIGN.md`: detector rationale and references.
+- `reports/original_cleaned_v3/`: recovered training and evaluation evidence.
+- `reports/audit/`: detailed verification logs, plots, and study notes.
+
+Local checkpoints, cleaned images, and generated predictions are ignored by Git.
+The original dataset is retained for historical reference; it is not the
+training split for the cleaned-v3 model.
 
 ## CAT 2 evidence and navigation
 
-[YOLO11s_Base.ipynb](YOLO11s_Base.ipynb) organizes existing work, actual reproduced cleaning outputs, recovered training evidence and verified validation/test results. It is AI-assisted organization, with team-authored interpretation and member contributions still required.
+[YOLO11s_Base.ipynb](YOLO11s_Base.ipynb) organizes existing work, reproduced
+cleaning outputs, recovered training evidence, and verified validation/test
+results. It is AI-assisted organization; team-authored interpretation and
+member contributions are still required.
 
-See [model notes and asset checksums](docs/MODEL.md), [original training evidence](reports/original_cleaned_v3/README.md), and the [concise verification record](reports/verification_2026-10-27/README.md). Cleaned-v3 data and weights are external assets. Follow MODEL.md to create the machine-specific evaluation YAML. Four reported test metrics reproduced to two decimal places on CPU; this does not establish mobile performance.
-
-Detailed logs, extra plots and study notes are grouped in the [optional audit folder](reports/audit/2026-10-27/README.md).
+See [model notes and asset checksums](docs/MODEL.md), [original training
+evidence](reports/original_cleaned_v3/README.md), and the [concise verification
+record](reports/verification_2026-10-27/README.md). Four reported test metrics
+were reproduced to two decimal places on CPU; this does not establish mobile
+performance.
