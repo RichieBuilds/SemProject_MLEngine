@@ -101,4 +101,4 @@ for mobile inference.
 
 ## Local verification follow-up (AI-assisted, 27 October 2026)
 
-Recovered from the supplied transfer records. The local and Drive checkpoint SHA-256 both match the documented value. The inference example above explicitly selects models/best.pt because this checkout defaults to generic yolo11s.pt. Original run evidence is preserved under reports/original_cleaned_v3; newly executed verification is separate under reports/verification_2026-10-27. Validation and test evaluation were reproduced; see [CAT2_REVIEW.md](../reports/audit/2026-10-27/REVIEW.md) for exact results and conditions.
+Recovered from the supplied transfer records. The local and Drive checkpoint SHA-256 both match the documented value. The detector now defaults to models/best.pt; explicitly selecting that path in the example is also supported. Original run evidence is preserved under reports/original_cleaned_v3; newly executed verification is separate under reports/verification_2026-10-27. Validation and test evaluation were reproduced; see [CAT2_REVIEW.md](../reports/audit/2026-10-27/REVIEW.md) for exact results and conditions.

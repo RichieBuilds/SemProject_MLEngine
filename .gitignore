@@ -31,3 +31,9 @@ runs/
 
 # OS
 .DS_Store
+
+# Local manual inference input
+/road_test.jpg
+
+# Ultralytics dataset caches
+*.cache

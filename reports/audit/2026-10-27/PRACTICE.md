@@ -6,7 +6,7 @@ These are explanations and rehearsal prompts, not team-authored assessed analysi
 
 A YOLO text line is `class x_center y_center width height`. Class 0 means pothole here. Coordinates are fractions of the image dimensions; multiply x and width by image width, and y and height by image height to recover pixels. Corners are `(x ± width/2, y ± height/2)`. One image can have several label lines. The CSV exploration pads extra object columns with NaN; padding is different from a missing image label. The cleaning notebook checks these cases separately.
 
-The inference wrapper lazily loads a checkpoint and calls Ultralytics prediction. Its default `yolo11s.pt` is a generic pretrained checkpoint; select `models/best.pt` explicitly for the authenticated pothole model. Confidence filtering controls which predictions are returned. It does not establish correctness against a label.
+The inference wrapper lazily loads a checkpoint and calls Ultralytics prediction. Its default is now the authenticated pothole checkpoint `models/best.pt`; a missing default checkpoint produces setup instructions. Generic pretrained `yolo11s.pt` initializes a new training experiment. Confidence filtering controls which predictions are returned. It does not establish correctness against a label.
 
 ## Explain this YOLO11s
 

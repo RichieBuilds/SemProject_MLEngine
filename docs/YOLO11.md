@@ -1,34 +1,9 @@
-# YOLO11 Integration
+# YOLO11 integration
 
-The inference wrapper defaults to generic pretrained `yolo11s.pt`. The authenticated pothole checkpoint is `models/best.pt`; select it explicitly. The cleaned-v3 training notebook and original run artifacts are available, and validation/test evaluation has been independently reproduced on CPU. See [model notes](MODEL.md) and [verification review](../reports/audit/2026-10-27/REVIEW.md) for checksums, conditions and limitations.
+The detector now defaults to the trained cleaned-v3 checkpoint at
+`models/best.pt`. Generic `yolo11s.pt` is the starting point for training only.
 
-## Install
+See [MODEL.md](MODEL.md) for teammate setup, the checkpoint checksum, recorded
+metrics, and evaluation instructions. See [the README](../README.md) for CLI usage.
 
-From the repository root:
-
-```bash
-uv sync
-```
-
-The first prediction with `yolo11s.pt` downloads the pretrained weights if they
-are not already available locally. Weights are intentionally excluded from Git.
-
-## Predict
-
-```bash
-uv run semproject-mlengine predict path/to/image.jpg --model models/best.pt --save
-```
-
-Use a CPU explicitly when no CUDA GPU is available:
-
-```bash
-uv run semproject-mlengine predict path/to/image.jpg --model models/best.pt --device cpu --save
-```
-
-Annotated results are written under `runs/predict/pothole/` when `--save` is
-provided. A custom trained checkpoint can be supplied with `--model`:
-
-```bash
-uv run semproject-mlengine predict path/to/image.jpg \
-  --model models/best.pt --save
-```
+The fixed cleaned-v3 checkpoint was independently evaluated on CPU using Ultralytics 8.4.189. All four reported test metrics reproduced to two decimal places. See the [verification record](../reports/verification_2026-10-27/README.md) for conditions and the distinction between supplied original evidence and newly reproduced outputs.

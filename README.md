@@ -4,7 +4,7 @@ YOLO11s pothole detection using the cleaned-v3 trained checkpoint.
 
 ## Setup for teammates
 
-Run commands from this repository's root with Python 3.13+ and `uv` installed:
+Run commands from this repository's root with Python 3.13+ and uv installed:
 
 ```bash
 uv sync
@@ -30,23 +30,13 @@ suffix). The printed count is the number of predicted boxes, not verified pothol
 
 ## Train and evaluate
 
-Open [the Colab notebook](train_yollo_collab.ipynb). It mounts Drive, extracts
-the cleaned-v3 ZIP, checks all three splits, trains from pretrained `yolo11s.pt`,
-saves checkpoints to Drive, and evaluates the held-out test split. It does not
-use the original `data/1` splits. A GPU is needed for practical training.
+Open [the Colab notebook](train_yollo_collab.ipynb). It mounts Drive, extracts the
+cleaned-v3 ZIP, checks all three splits, trains from pretrained `yolo11s.pt`, saves
+checkpoints to Drive, and evaluates the held-out test split. It does not use the
+original `data/1` splits. A GPU is needed for practical training.
 
 If Colab resets, rerun setup through the dataset and GPU checks, then load the
 saved checkpoint for evaluation. Do not rerun training just to test a saved model.
-
-Create the local cleaned-data YAML as described in [MODEL.md](docs/MODEL.md),
-then evaluate the checkpoint on the test split:
-
-```bash
-uv run yolo detect val \
-  model=models/best.pt \
-  data=data/cleaned/data.yaml \
-  split=test imgsz=640 device=cpu
-```
 
 ## Repository guide
 
@@ -55,22 +45,16 @@ uv run yolo detect val \
 - `notebooks/roadwatch_dataset_cleaning.ipynb`: split decisions and data checks.
 - `docs/MODEL.md`: checkpoint distribution, recorded results, and limitations.
 - `docs/DESIGN.md`: detector rationale and references.
-- `reports/original_cleaned_v3/`: recovered training and evaluation evidence.
-- `reports/audit/`: detailed verification logs, plots, and study notes.
+- `reports/dataset_review/`: evidence retained from the cleaning review.
 
 Local checkpoints, cleaned images, and generated predictions are ignored by Git.
-The original dataset is retained for historical reference; it is not the
+The original dataset is already tracked for historical reference; it is not the
 training split for the cleaned-v3 model.
 
-## CAT 2 evidence and navigation
+## CAT 2 evidence
 
-[YOLO11s_Base.ipynb](YOLO11s_Base.ipynb) organizes existing work, reproduced
-cleaning outputs, recovered training evidence, and verified validation/test
-results. It is AI-assisted organization; team-authored interpretation and
-member contributions are still required.
+[YOLO11s_Base.ipynb](YOLO11s_Base.ipynb) organizes existing work and reproduced verification. Team-authored explanations and actual member contributions remain the team's responsibility.
 
-See [model notes and asset checksums](docs/MODEL.md), [original training
-evidence](reports/original_cleaned_v3/README.md), and the [concise verification
-record](reports/verification_2026-10-27/README.md). Four reported test metrics
-were reproduced to two decimal places on CPU; this does not establish mobile
-performance.
+See [original training evidence](reports/original_cleaned_v3/README.md) and the [concise verification record](reports/verification_2026-10-27/README.md). Cleaning checks passed against the restored manifests; all four reported test metrics reproduced to two decimal places on CPU, with environment differences recorded. Optional detailed logs and study notes are grouped in the [audit folder](reports/audit/2026-10-27/README.md).
+
+The earlier original-split training notebook is preserved in [the notebook archive](notebooks/archive/train_original_split.ipynb).

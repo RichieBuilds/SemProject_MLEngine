@@ -1,6 +1,6 @@
 # Design Notes
 
-**Repository training choice:** YOLO11s (`yolo11s.pt`). Earlier nano/small wording describes alternatives, not verified comparison results. See [evidence review](../reports/audit/2026-10-27/REVIEW.md).
+**Chosen detector:** YOLO11s, initialized from pretrained `yolo11s.pt`. Nano/small alternatives are not completed model comparisons.
 
 ## 1. Background: what is YOLO?
 YOLO stands for "You Only Look Once". It is a family of deep learning models
@@ -55,4 +55,7 @@ most. We check this in our results.
 [4] Ultralytics, "YOLO11 vs. YOLO26," Ultralytics Docs (accessed Oct 2026).
     https://docs.ultralytics.com/compare/yolo11-vs-yolo26
 
-Dataset metadata and declared license: see `data/1/README.roboflow.txt` and `data/1/data.yaml`. A standalone CREDITS.md is absent.
+Dataset attribution: the original export records CC BY 4.0, Roboflow workspace
+`vasanthakumar662005`, project `pothole-pq3lu`, version 1. See
+`data/1/README.roboflow.txt` and `data/1/data.yaml` for the retained source metadata.
+See [MODEL.md](MODEL.md) for the current trained checkpoint and dataset splits.
