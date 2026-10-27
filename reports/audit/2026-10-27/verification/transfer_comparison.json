@@ -1,0 +1,72 @@
+[
+  {
+    "path": "pothole_detection_dataset_YOLOv11_optimized_Exploration.ipynb",
+    "status": "same",
+    "incoming_sha256": "fd7e4852ad656fa7d65824d1174f00c5b397a36a3942cff204e357fda2305e35"
+  },
+  {
+    "path": "train_yollo_collab.ipynb",
+    "status": "different",
+    "incoming_sha256": "c468ea7f9d7ef2643caf969693f0fc72fc15c79020e1139e5e60d7a9d4705bc4"
+  },
+  {
+    "path": "README.md",
+    "status": "different",
+    "incoming_sha256": "bf05f67b8284530e62d35c623a87e03fd5fc94e3943ccca9269e9f5edf578867"
+  },
+  {
+    "path": "TRANSFER_README.txt",
+    "status": "missing",
+    "incoming_sha256": "0c2447c82a7a5ecd127517c9081d95641cc05c3a2c43b0ddba8ba9c10285710d"
+  },
+  {
+    "path": "data/split_manifest.csv",
+    "status": "missing",
+    "incoming_sha256": "0424b06622c412b3929d4a2c3cdffb73398f4526954271930c083dca553caba3"
+  },
+  {
+    "path": "data/split_manifest_v2.csv",
+    "status": "missing",
+    "incoming_sha256": "f61a1c33541a53f2f9f71a2cf0c82005a6daf62a7ed30fbc2f56c240847abba8"
+  },
+  {
+    "path": "data/split_manifest_v3.csv",
+    "status": "missing",
+    "incoming_sha256": "83329b3696e718fceeeabba51c56daecb9c3b572e906a15452c7ff7bc0c5f6d3"
+  },
+  {
+    "path": "data/cross_split_phash_v2.csv",
+    "status": "missing",
+    "incoming_sha256": "3a479ba8ec4ed3048bde2182be22cc29afe979580b5af7c184fe1927da1fa011"
+  },
+  {
+    "path": "data/cross_split_phash_v3.csv",
+    "status": "missing",
+    "incoming_sha256": "2c363e43a95719578d2f02d55a841af283a8c82eaee8308cfb1e3ef67ffb43ca"
+  },
+  {
+    "path": "notebooks/roadwatch_dataset_cleaning.ipynb",
+    "status": "same",
+    "incoming_sha256": "4ad503bd384e73fb72a602daa6c89b7b2d25a07b06263506f000f6b457d67344"
+  },
+  {
+    "path": "docs/MODEL.md",
+    "status": "missing",
+    "incoming_sha256": "b9e482c3766af6a750cbc347241c364e0d31da8bb29158e2b351771f5f038d79"
+  },
+  {
+    "path": "docs/DESIGN.md",
+    "status": "different",
+    "incoming_sha256": "abf032c9a0d5da2e04922163fb6c6616f95f1d6e5ff68133c897222222372c88"
+  },
+  {
+    "path": "reports/dataset_review/near_duplicate_review.jpg",
+    "status": "same",
+    "incoming_sha256": "ac467fb8f927fede6b2fde64cfe70c7929675888069ee05a43cf7c49262006cd"
+  },
+  {
+    "path": "reports/dataset_review/cross_split_review_v2.jpg",
+    "status": "same",
+    "incoming_sha256": "0118ed4f4abbbbd5a2ee9156d8db92572a3daad0160c13c4a28047adafab9eb4"
+  }
+]

@@ -50,3 +50,11 @@ saved checkpoint for evaluation. Do not rerun training just to test a saved mode
 Local checkpoints, cleaned images, and generated predictions are ignored by Git.
 The original dataset is already tracked for historical reference; it is not the
 training split for the cleaned-v3 model.
+
+## CAT 2 evidence
+
+[YOLO11s_Base.ipynb](YOLO11s_Base.ipynb) organizes existing work and reproduced verification. Team-authored explanations and actual member contributions remain the team's responsibility.
+
+See [original training evidence](reports/original_cleaned_v3/README.md) and the [concise verification record](reports/verification_2026-10-27/README.md). Cleaning checks passed against the restored manifests; all four reported test metrics reproduced to two decimal places on CPU, with environment differences recorded. Optional detailed logs and study notes are grouped in the [audit folder](reports/audit/2026-10-27/README.md).
+
+The earlier original-split training notebook is preserved in [the notebook archive](notebooks/archive/train_original_split.ipynb).

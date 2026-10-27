@@ -1,0 +1,7 @@
+names:
+  0: pothole
+nc: 1
+path: /home/mohamedekaden/3.2/AI/SemProject_MLEngine/SemProject_MLEngine/data/cleaned
+test: test/images
+train: train/images
+val: valid/images

@@ -1,0 +1,268 @@
+[
+  {
+    "name": "roadwatch_cleaned_v3.zip.part003",
+    "folder": "transfer",
+    "size": 58034047,
+    "id": "1V471lJX20siBjBaP9xY4W8HDz6XEG0uK",
+    "sha256": "f92a535f7e46535b5c8e7445b3029c92a1569d8b9e43add6951db46fbab0a500"
+  },
+  {
+    "name": "roadwatch_cleaned_v3.zip.part002",
+    "folder": "transfer",
+    "size": 83886080,
+    "id": "1cyDL09MpAUEVe6QSffcO5z0o4xd0PtuR",
+    "sha256": "adafc941d0d573946b9bf443531f0dfd0aeb2d610bd8bfd74aefd45597566e23"
+  },
+  {
+    "name": "roadwatch_cleaned_v3.zip.part001",
+    "folder": "transfer",
+    "size": 83886080,
+    "id": "1bLdAdLQIW-O1ihmBH17NvgmmM4pPwaqq",
+    "sha256": "99df611cb3c4503c4052bc845cc19feb55d225581a3f5235f5f258804ead2ba2"
+  },
+  {
+    "name": "ROADWATCH_TRANSFER_INSTRUCTIONS.txt",
+    "folder": "transfer",
+    "size": 734,
+    "id": "1hqqyM5dc3au4qyNBV9KxaIiE5fKTBf2G",
+    "sha256": "f0ac3029482a29c7c6f532c5cfd21f8cc4f7b9afbe36a6473d42ab9bf59a9d97"
+  },
+  {
+    "name": "RoadWatch_v3_transfer_records.zip",
+    "folder": "transfer",
+    "size": 1488379,
+    "id": "1Qs_D_Vy65HUAA4rVRVVkWmmigSV9KOGx",
+    "sha256": "6ef879efb47a4b3bfe3c32e678bb8e3afc6cf254c31507671d298f224c47f045"
+  },
+  {
+    "name": "results.png",
+    "folder": "run",
+    "size": 270453,
+    "id": "1xa6mAU9y31Svl0gwtV2gjxcRsN-Fs43Y",
+    "sha256": "6bd18f5edea9438cd3cf1390e6e7b0ab1290a08a8cdf699b7bd729cc83966dea"
+  },
+  {
+    "name": "confusion_matrix.png",
+    "folder": "run",
+    "size": 108642,
+    "id": "1u5llGtN29O59PEtqYz7B-zWSrh7-EuyV",
+    "sha256": "252bea9dc7ccf614305297f9c1b89e78a877f3171570c7a97d8cbc4a4a9fb40b"
+  },
+  {
+    "name": "confusion_matrix_normalized.png",
+    "folder": "run",
+    "size": 99453,
+    "id": "1I41XqmSrMV2CtGcC3XFhpiMgdkwj5qSG",
+    "sha256": "01ed682760f256da9501a4f3f9a8d6a94f711225959d120e9ad6270bca34773a"
+  },
+  {
+    "name": "BoxR_curve.png",
+    "folder": "run",
+    "size": 103158,
+    "id": "1dpvqArkhgWG6jIaU5_eFodcKJxuB-OOy",
+    "sha256": "9792dd84cf61a2770cba6326c4624368a4bc8988a2af4579ed72695ee42ad548"
+  },
+  {
+    "name": "BoxP_curve.png",
+    "folder": "run",
+    "size": 99827,
+    "id": "1wXR2KEh6FD_mGe9vIZ4fjHWKgsjHypEK",
+    "sha256": "fd6a77deabb47f526e9e09df1e1b58f1854941325572693bdbee97af47faa5e5"
+  },
+  {
+    "name": "BoxF1_curve.png",
+    "folder": "run",
+    "size": 103442,
+    "id": "1gIW7QJwwZ74velO2Zk2uC-ef4CKWXHdZ",
+    "sha256": "2239bc55057c737b8aee4d3548006c2b37943fd0c5725f5d3e893060f044f994"
+  },
+  {
+    "name": "BoxPR_curve.png",
+    "folder": "run",
+    "size": 94354,
+    "id": "1FMU1PT0kTiKwwmJiTTbmNBmPAaj-Ilsa",
+    "sha256": "a6c35df6d116e1a7b5aa6ea869c516ee817f9e3b602358a43c8d5cf7ff4caf26"
+  },
+  {
+    "name": "val_batch2_pred.jpg",
+    "folder": "run",
+    "size": 859025,
+    "id": "1bp_TWdKu-iw1Djq_j1M2ByNzF5fVhS_M",
+    "sha256": "97eacce31d66c8fc0b9987a3b6edca5ab8d9013c53ed3eb3285a247f0751d4ba"
+  },
+  {
+    "name": "val_batch2_labels.jpg",
+    "folder": "run",
+    "size": 821219,
+    "id": "1x8Ru3btxVetkVsT4W7fwjQNa041IHGxq",
+    "sha256": "cb72a8898cac253f78e1fe56c70f98a55c36e6c070cd173e1df9f7b9093d3770"
+  },
+  {
+    "name": "results.csv",
+    "folder": "run",
+    "size": 10079,
+    "id": "1AxFYXGVEtYqhKa8KeACvCYLr8bbU-eMv",
+    "sha256": "80a1d0b9e5ed12f39a647deb0ea7337f3c3e438bb4a079c6a44a0cf112691fd5"
+  },
+  {
+    "name": "val_batch1_pred.jpg",
+    "folder": "run",
+    "size": 785020,
+    "id": "11ueSh89aWssQG1YSfzf8V7v1dvJn_z5I",
+    "sha256": "2dbf99e5c90c75cdc9f0fdb059011ed3809de322c6c27516a81a2676fb0463d7"
+  },
+  {
+    "name": "val_batch1_labels.jpg",
+    "folder": "run",
+    "size": 760545,
+    "id": "1UvNOPWkKBjzRvRjyLsUHE4HyN4YCp5Ig",
+    "sha256": "aeb818603d0167d33c2d85f5008d35c840abba76aaf79c52d5714f43562f6ac5"
+  },
+  {
+    "name": "val_batch0_labels.jpg",
+    "folder": "run",
+    "size": 719370,
+    "id": "1yIGDwqoUp-Qs8UXEc5d1E1w_G8V5RT8Y",
+    "sha256": "71b0681c83b67140a2424cfd31dffab90688cbecaf70e421addcc09e92f25db8"
+  },
+  {
+    "name": "val_batch0_pred.jpg",
+    "folder": "run",
+    "size": 741072,
+    "id": "1Qa815hrdvx2TrGLblGU3x43C-15I31PC",
+    "sha256": "2c662ad1dfa94c9c5c73fe6419ee9aca52e3f372d0e4ad9ccadbc89746544ee6"
+  },
+  {
+    "name": "train_batch2.jpg",
+    "folder": "run",
+    "size": 683107,
+    "id": "1AvmN2ErqCklfHwwfTL32YM1rOrnABboR",
+    "sha256": "8d0e9749f551bbf73cc58af676b4827288f8116466ec6cc55501c11fe9aa783f"
+  },
+  {
+    "name": "train_batch1.jpg",
+    "folder": "run",
+    "size": 620117,
+    "id": "1XCTqyM3tGI9qhXxfxX2rQ98QrS5bxeK7",
+    "sha256": "659ce160524e1ac4732a46b91987501f99a94785fc64a54517732321a88c52b0"
+  },
+  {
+    "name": "train_batch0.jpg",
+    "folder": "run",
+    "size": 672274,
+    "id": "1DgzAoPj_-T0ko9O5HfAF0RnNhtPT2tyM",
+    "sha256": "0c0dafcea13e6224b527b878134d7a43187342f8d04a65a705740a3f74613771"
+  },
+  {
+    "name": "labels.jpg",
+    "folder": "run",
+    "size": 197207,
+    "id": "1Hfpr24oqsMAWWyh4gbGzqtDSQOTdVxUG",
+    "sha256": "64650daac822570d2712ef8669a923606ba2c4256b64154afd7fc8f3f2941b06"
+  },
+  {
+    "name": "args.yaml",
+    "folder": "run",
+    "size": 1772,
+    "id": "1vMnOGjMkP6Ka-5v6bCxAN37xDSbNnXa5",
+    "sha256": "7d07e6c3b7041ab2a426e9dc6c179198f775f39294100a1f3bcad0c0d44d9f57"
+  },
+  {
+    "name": "confusion_matrix.png",
+    "folder": "test",
+    "size": 103744,
+    "id": "1Ud_BzKvyItOT1VZFjTo-j_JsOsjLQDNJ",
+    "sha256": "a022f3d42581b6fdaedd43473e400af5f359f6fd7b5c9e4ec3db82fb2c81d42a"
+  },
+  {
+    "name": "confusion_matrix_normalized.png",
+    "folder": "test",
+    "size": 99620,
+    "id": "1qrR8qx-YczhoDY0GVJaTVlwt8T5zyfC2",
+    "sha256": "7bef1e65356f93f9814673058ba4557eed4a543a0938005b0932431d956f28d3"
+  },
+  {
+    "name": "BoxR_curve.png",
+    "folder": "test",
+    "size": 106326,
+    "id": "1cy_UUpDmibiBf269JQ_mI7Z_jqMFzKn2",
+    "sha256": "dd85ecc386514df43bbd1c19e933d37f3b59b5a4c69911b11b9b33437fb9b5da"
+  },
+  {
+    "name": "BoxP_curve.png",
+    "folder": "test",
+    "size": 102695,
+    "id": "1PFfvt7bTrpEvYrymzB21J3V9RBouCJ6u",
+    "sha256": "c70b0389c6f26cee3e478bdccaa2f1544b80ccc57d8025ec8aabcc80d912b6fa"
+  },
+  {
+    "name": "BoxF1_curve.png",
+    "folder": "test",
+    "size": 106010,
+    "id": "12PaGEMuozfn2akIfKvVpmmrlJ6sIrMhr",
+    "sha256": "40e6a40b45a9223c8c1abdef48624dd4450ca3378d722d420e05e619b21ca43a"
+  },
+  {
+    "name": "BoxPR_curve.png",
+    "folder": "test",
+    "size": 91220,
+    "id": "1buqsOUPhcOPpdDE2WqOo4ipaa2spZnVx",
+    "sha256": "5daf13fa1e89385f582e9bc497908c29bb548d862865b08a9a13ddfed0544d9d"
+  },
+  {
+    "name": "val_batch2_pred.jpg",
+    "folder": "test",
+    "size": 775738,
+    "id": "1ibKKhd9bbf12A1jRf1igDDaAm34Ou_0v",
+    "sha256": "440f36386c25c873d9d31f69c140140e19a9104f67c76e076cb34ccf883b0896"
+  },
+  {
+    "name": "val_batch2_labels.jpg",
+    "folder": "test",
+    "size": 724234,
+    "id": "1C5go1S7iv60zaw1sKNyLTAs-y08_L5Ic",
+    "sha256": "8b4d59ab150acdd7de56a08ada31061a3dc3465ade485ef0d9ccd074362032d4"
+  },
+  {
+    "name": "val_batch1_pred.jpg",
+    "folder": "test",
+    "size": 804152,
+    "id": "1sPBpTgrjxEeoxTe06RrLOXxKD63u4zx7",
+    "sha256": "b691e5141707f898955f2e3640d125f6719f49bfb4dfcb88d237c5be46a8c0f4"
+  },
+  {
+    "name": "val_batch1_labels.jpg",
+    "folder": "test",
+    "size": 789295,
+    "id": "1KXlz8et7IHC0OhgTJ3XZHkiEo7WRYEwO",
+    "sha256": "94baf7d1cb4ec1f7db80ca64612329388ff6da9fbd1dcbdf2342d0547c4531a5"
+  },
+  {
+    "name": "val_batch0_pred.jpg",
+    "folder": "test",
+    "size": 647346,
+    "id": "1c8JVDtUIAhLW7VsFvV8o8dI46prFFkih",
+    "sha256": "b585bc86cddca4c32d5e72518a0fd8d389ee0000fa70096960efcbbb06c9c2a4"
+  },
+  {
+    "name": "val_batch0_labels.jpg",
+    "folder": "test",
+    "size": 647938,
+    "id": "1ftyQelw-QkTsYNCYBVF0smJbG_xC1bLT",
+    "sha256": "70e2d48a0a068da230e9766c022ec86a17966ba2afec8877f45589c393c412fe"
+  },
+  {
+    "name": "best.pt",
+    "folder": "weights",
+    "size": 19182298,
+    "id": "1JUST_0039PeqS6NHgy4x2s0zypoeJjCH",
+    "sha256": "9dad6abd86b08e02d76a02f5e0190ddf373b39de9b8487646f01a541e8810291"
+  },
+  {
+    "name": "last.pt",
+    "folder": "weights",
+    "size": 19182298,
+    "id": "18PGAu08tNqibWhdjOcygp5HfXRKCL8ie",
+    "sha256": "1385a94ffabdff1f18ddc5d1b2111067e7ccbcb455ea8bde44e8b723523812a3"
+  }
+]

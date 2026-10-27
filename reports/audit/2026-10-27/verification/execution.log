@@ -1,0 +1,36 @@
+CELL 1
+Repository: SemProject_MLEngine
+
+CELL 3
+train 3345 images, 3345 labels
+valid 397 images, 397 labels
+test 198 images, 198 labels
+Images: 3940 | source groups: 834
+
+CELL 5
+Invalid images/labels: 0
+Boxes: 10111
+Empty labels: 0
+
+CELL 6
+
+CELL 8
+Exact duplicate sets: 0
+Extra copies: 0
+Original source groups spanning splits: 385
+Original exact hashes spanning splits: 0
+
+CELL 10
+Proposal images: Counter({'train': 3162, 'valid': 402, 'test': 376})
+Traceback (most recent call last):
+  File "/home/mohamedekaden/Documents/Codex/2026-10-27/files-pasted-by-the-user-work/work/verify_existing.py", line 14, in <module>
+    with contextlib.redirect_stdout(buf):exec(compile(''.join(c['source']),f'cleaning-cell-{i}','exec'),ns)
+                                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "cleaning-cell-10", line 22, in <module>
+  File "cleaning-cell-10", line 9, in load_manifest
+  File "/usr/lib64/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/mohamedekaden/3.2/AI/SemProject_MLEngine/SemProject_MLEngine/data/split_manifest_v2.csv'
+
+Original-split pHash pairs <=5: 85

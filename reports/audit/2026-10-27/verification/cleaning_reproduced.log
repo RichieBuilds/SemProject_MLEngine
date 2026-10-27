@@ -1,0 +1,56 @@
+CELL 1
+Repository: SemProject_MLEngine
+
+CELL 3
+train 3345 images, 3345 labels
+valid 397 images, 397 labels
+test 198 images, 198 labels
+Images: 3940 | source groups: 834
+
+CELL 5
+Invalid images/labels: 0
+Boxes: 10111
+Empty labels: 0
+
+CELL 6
+cleaning-cell-6:11: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+CELL 8
+Exact duplicate sets: 0
+Extra copies: 0
+Original source groups spanning splits: 385
+Original exact hashes spanning splits: 0
+
+CELL 10
+Proposal images: Counter({'train': 3162, 'valid': 402, 'test': 376})
+Recorded v2 images: Counter({'train': 3180, 'test': 385, 'valid': 375})
+
+CELL 12
+v2 cross-split pHash pairs: 8
+('10_jpg.rf.27be1fcbf1edc25b626cfbf193263641.jpg', 'potholes504_png.rf.4633b38088985f578083ee44d4a414f9.jpg', 2)
+('10_jpg.rf.8d9f5bea5bf29dbe49a633bb9d6ab154.jpg', 'potholes504_png.rf.5ad6aaa6cdb4ae810732b13b9dd9900b.jpg', 2)
+('10_jpg.rf.8d9f5bea5bf29dbe49a633bb9d6ab154.jpg', 'potholes504_png.rf.a975845d7e750a3732c9ea9da3a74757.jpg', 2)
+('18_jpg.rf.0b529fb857198125af8e3ec396cae79e.jpg', 'potholes19_png.rf.70cb59c1e547d6f79ec85049fd20cac3.jpg', 2)
+('18_jpg.rf.2f53e5de78f37bc2da064ba97891c9dc.jpg', 'potholes19_png.rf.c9c4670b52e1bf1bb36567c6cd481c98.jpg', 2)
+('355_jpg.rf.5b5ce9ea0e882009f84d2cae3df26c33.jpg', 'potholes263_png.rf.79dd72dfafa60b2b022d36057891cea9.jpg', 4)
+('55_jpg.rf.6cb9cdacad845bbc83375ae2101adf03.jpg', 'potholes641_png.rf.4483312a14ad8c92748057ea5c2954f9.jpg', 4)
+('21_jpg.rf.9e6ffad2a228077cb840ae800ac0e2af.jpg', 'potholes618_png.rf.238a9426c3e5e6d1135e47792ce03792.jpg', 0)
+
+CELL 13
+cleaning-cell-13:10: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+CELL 15
+train 3196 images; 8141 boxes
+valid 375 images; 1097 boxes
+test 369 images; 873 boxes
+Source leakage: 0; cross-split pHash matches <=5: 0
+
+CELL 17
+Read-only run: optional copy skipped.
+
+CELL 19
+cleaned train 3196 images, 8141 boxes: passed
+cleaned valid 375 images, 1097 boxes: passed
+cleaned test 369 images, 873 boxes: passed
+cleaned_notebook not present; skipped
+FINAL DATASET VALIDATION PASSED

@@ -32,7 +32,7 @@ From the repository root:
 
 ```bash
 uv sync
-uv run semproject-mlengine predict path/to/image.jpg --device cpu --save
+uv run semproject-mlengine predict path/to/image.jpg --model models/best.pt --device cpu --save
 ```
 
 The default confidence threshold is 0.25. Use `--confidence 0.4` to override it,
@@ -42,8 +42,7 @@ threshold using validation data; do not tune it repeatedly on the held-out test 
 ## Dataset and training record
 
 The following record comes from the Colab output supplied during the cleaned-v3
-run. The test metrics have not been independently rerun by this repository's
-unit tests.
+run. The repository unit tests do not validate model quality. A separate AI-assisted CPU evaluation on 27 October 2026 reproduced the four reported test metrics to two decimal places; see [verification review](../reports/audit/2026-10-27/REVIEW.md) for exact values and environment differences.
 
 - Architecture: YOLO11s, one class, `0: pothole`; pretrained `yolo11s.pt` initialization.
 - Cleaned-v3 training: 3,196 images / 8,141 boxes.
@@ -99,3 +98,7 @@ but its provenance does not establish independence from training data. The repor
 More varied independent road images, including roads without potholes, are needed
 before deployment. This checkpoint is not yet integrated into Android or exported
 for mobile inference.
+
+## Local verification follow-up (AI-assisted, 27 October 2026)
+
+Recovered from the supplied transfer records. The local and Drive checkpoint SHA-256 both match the documented value. The detector now defaults to models/best.pt; explicitly selecting that path in the example is also supported. Original run evidence is preserved under reports/original_cleaned_v3; newly executed verification is separate under reports/verification_2026-10-27. Validation and test evaluation were reproduced; see [CAT2_REVIEW.md](../reports/audit/2026-10-27/REVIEW.md) for exact results and conditions.

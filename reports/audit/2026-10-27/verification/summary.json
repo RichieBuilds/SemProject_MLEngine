@@ -1,0 +1,85 @@
+{
+  "scope": "Original data/1 only; AI-assisted verification, not original training evidence",
+  "checkpoint_sha256": "9dad6abd86b08e02d76a02f5e0190ddf373b39de9b8487646f01a541e8810291",
+  "checkpoint_verified_against_expected": false,
+  "splits": {
+    "train": {
+      "images": 3345,
+      "boxes": 8705,
+      "empty_labels": 0,
+      "potholes_per_image": {
+        "1": 1476,
+        "2": 810,
+        "3": 403,
+        "4": 185,
+        "5": 186,
+        "6": 63,
+        "7": 55,
+        "8": 46,
+        "9": 24,
+        "10": 24,
+        "11": 1,
+        "12": 10,
+        "13": 14,
+        "14": 5,
+        "15": 4,
+        "16": 6,
+        "17": 10,
+        "18": 11,
+        "19": 8,
+        "21": 4
+      }
+    },
+    "valid": {
+      "images": 397,
+      "boxes": 973,
+      "empty_labels": 0,
+      "potholes_per_image": {
+        "1": 191,
+        "2": 83,
+        "3": 47,
+        "4": 24,
+        "5": 19,
+        "6": 8,
+        "7": 8,
+        "8": 4,
+        "9": 4,
+        "10": 2,
+        "12": 3,
+        "13": 3,
+        "17": 1
+      }
+    },
+    "test": {
+      "images": 198,
+      "boxes": 433,
+      "empty_labels": 0,
+      "potholes_per_image": {
+        "1": 100,
+        "2": 46,
+        "3": 21,
+        "4": 14,
+        "5": 6,
+        "6": 2,
+        "7": 3,
+        "8": 1,
+        "9": 4,
+        "15": 1
+      }
+    }
+  },
+  "source_groups": 834,
+  "source_groups_spanning_original_splits": 385,
+  "exact_duplicate_sets": 0,
+  "exact_hashes_spanning_original_splits": 0,
+  "cross_split_phash_pairs_distance_le_5": 85,
+  "invalid_images_or_labels": [],
+  "pairing_errors": [],
+  "box_area_fraction_quantiles": {
+    "min": 0.00011352539062499999,
+    "25%": 0.009523925781250001,
+    "median": 0.028319091796874998,
+    "75%": 0.08976806640625,
+    "max": 0.9937597656249999
+  }
+}

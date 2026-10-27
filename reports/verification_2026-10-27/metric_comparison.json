@@ -1,0 +1,41 @@
+{
+  "test": {
+    "precision": {
+      "reported_percent": 78.97,
+      "reproduced_percent": 78.96610169430947,
+      "difference_percentage_points": -0.0038983056905195212
+    },
+    "recall": {
+      "reported_percent": 67.95,
+      "reproduced_percent": 67.94600217542208,
+      "difference_percentage_points": -0.003997824577917086
+    },
+    "mAP50": {
+      "reported_percent": 77.12,
+      "reproduced_percent": 77.12250752691507,
+      "difference_percentage_points": 0.0025075269150742763
+    },
+    "mAP50_95": {
+      "reported_percent": 48.41,
+      "reproduced_percent": 48.40587143529828,
+      "difference_percentage_points": -0.0041285647017164084
+    }
+  },
+  "validation_original_best_epoch": {
+    "epoch": "63",
+    "time": "3201.28",
+    "train/box_loss": "0.9921",
+    "train/cls_loss": "0.67721",
+    "train/dfl_loss": "1.16055",
+    "metrics/precision(B)": "0.7777",
+    "metrics/recall(B)": "0.66653",
+    "metrics/mAP50(B)": "0.73841",
+    "metrics/mAP50-95(B)": "0.41528",
+    "val/box_loss": "1.57823",
+    "val/cls_loss": "1.16065",
+    "val/dfl_loss": "1.6294",
+    "lr/pg0": "0.0007724",
+    "lr/pg1": "0.0007724",
+    "lr/pg2": "0.0007724"
+  }
+}

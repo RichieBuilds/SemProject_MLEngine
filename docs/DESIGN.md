@@ -1,6 +1,6 @@
 # Design Notes
 
-**Chosen detector:** YOLO11 (nano/small variants)
+**Chosen detector:** YOLO11s, initialized from pretrained `yolo11s.pt`. Nano/small alternatives are not completed model comparisons.
 
 ## 1. Background: what is YOLO?
 YOLO stands for "You Only Look Once". It is a family of deep learning models
