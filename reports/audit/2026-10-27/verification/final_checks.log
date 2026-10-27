@@ -1,0 +1,19 @@
+SCHEMA PASS: YOLO11s_Base.ipynb (legacy warnings: 0)
+SCHEMA PASS: notebooks/archive/train_original_split.ipynb (legacy warnings: 1)
+SCHEMA PASS: notebooks/roadwatch_dataset_cleaning.ipynb (legacy warnings: 0)
+KNOWN EMPTY PLACEHOLDER: notebooks/setup_and_data.ipynb
+SCHEMA PASS: pothole_detection_dataset_YOLOv11_optimized_Exploration.ipynb (legacy warnings: 0)
+SCHEMA PASS: reports/verification_2026-10-27/cleaning_partial_execution.ipynb (legacy warnings: 0)
+SCHEMA PASS: reports/verification_2026-10-27/cleaning_reproduced.ipynb (legacy warnings: 0)
+SCHEMA PASS: train_yollo_collab.ipynb (legacy warnings: 1)
+All local notebook/Markdown links resolve.
+65 saved evidence images decode.
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK
+
+git diff --check passed.
+No new large data/weight files are visible to Git; no new files exceed 10 MB.
+All recovered original run/test artifacts match download SHA-256 values.

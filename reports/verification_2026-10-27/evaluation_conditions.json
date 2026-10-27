@@ -1,0 +1,23 @@
+{
+  "provenance": "AI-assisted reproduced evaluation, not original run output",
+  "python": "3.13.17",
+  "torch": "2.14.1+cpu",
+  "ultralytics": "8.4.189",
+  "device": "cpu",
+  "threads": 4,
+  "imgsz": 640,
+  "batch": 16,
+  "workers": 0,
+  "half": false,
+  "augment": false,
+  "conf": 0.001,
+  "iou": 0.7,
+  "max_det": 300,
+  "original_recorded_environment": {
+    "python": "3.13.16",
+    "torch": "2.11.0+cu130",
+    "ultralytics": "8.4.189",
+    "device": "Tesla T4"
+  },
+  "checkpoint_sha256": "9dad6abd86b08e02d76a02f5e0190ddf373b39de9b8487646f01a541e8810291"
+}

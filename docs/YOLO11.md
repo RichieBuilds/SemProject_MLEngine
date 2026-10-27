@@ -1,8 +1,6 @@
 # YOLO11 Integration
 
-The project uses the pretrained `YOLO11s` model as its default pothole detector.
-This integration does not train a model. Training can be added later using the
-same dataset configuration in `data/1/data.yaml`.
+The inference wrapper defaults to generic pretrained `yolo11s.pt`. The authenticated pothole checkpoint is `models/best.pt`; select it explicitly. The cleaned-v3 training notebook and original run artifacts are available, and validation/test evaluation has been independently reproduced on CPU. See [model notes](MODEL.md) and [verification review](../reports/audit/2026-10-27/REVIEW.md) for checksums, conditions and limitations.
 
 ## Install
 
@@ -18,19 +16,19 @@ are not already available locally. Weights are intentionally excluded from Git.
 ## Predict
 
 ```bash
-uv run semproject-mlengine predict path/to/image.jpg --save
+uv run semproject-mlengine predict path/to/image.jpg --model models/best.pt --save
 ```
 
 Use a CPU explicitly when no CUDA GPU is available:
 
 ```bash
-uv run semproject-mlengine predict path/to/image.jpg --device cpu --save
+uv run semproject-mlengine predict path/to/image.jpg --model models/best.pt --device cpu --save
 ```
 
 Annotated results are written under `runs/predict/pothole/` when `--save` is
-provided. A custom trained checkpoint can later be supplied with `--model`:
+provided. A custom trained checkpoint can be supplied with `--model`:
 
 ```bash
 uv run semproject-mlengine predict path/to/image.jpg \
-  --model models/pothole_yolo11s.pt --save
+  --model models/best.pt --save
 ```

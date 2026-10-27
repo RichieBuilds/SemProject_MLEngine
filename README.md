@@ -63,18 +63,23 @@ Annotated results are saved under `runs/predict/pothole/`.
 
 ## Evaluate the Model
 
-Evaluate the trained checkpoint on the test split:
+Create the local cleaned-data YAML as described in [MODEL.md](docs/MODEL.md), then evaluate the checkpoint on the test split:
 
 ```bash
 uv run yolo detect val \
   model=models/best.pt \
-  data=data/1/data.yaml \
-  split=test
+  data=data/cleaned/data.yaml \
+  split=test imgsz=640 device=cpu
 ```
 
 ## Train on Google Colab
 
-Open [`train_yollo_collab.ipynb`](train_yollo_collab.ipynb) in Google Colab.
-The notebook clones the `dek_Engine` branch, verifies the dataset, trains
-YOLO11s, evaluates the test split, and saves the best checkpoint to Google
-Drive. Select a GPU runtime before running the training cell.
+The restored [cleaned-v3 training notebook](train_yollo_collab.ipynb) uses the externally supplied cleaned-v3 archive in Drive and Ultralytics 8.4.189. Original-split training code is preserved in [the notebook archive](notebooks/archive/train_original_split.ipynb). Start training only for a new explicitly planned experiment; do not retrain to replace evidence.
+
+## CAT 2 evidence and navigation
+
+[YOLO11s_Base.ipynb](YOLO11s_Base.ipynb) organizes existing work, actual reproduced cleaning outputs, recovered training evidence and verified validation/test results. It is AI-assisted organization, with team-authored interpretation and member contributions still required.
+
+See [model notes and asset checksums](docs/MODEL.md), [original training evidence](reports/original_cleaned_v3/README.md), and the [concise verification record](reports/verification_2026-10-27/README.md). Cleaned-v3 data and weights are external assets. Follow MODEL.md to create the machine-specific evaluation YAML. Four reported test metrics reproduced to two decimal places on CPU; this does not establish mobile performance.
+
+Detailed logs, extra plots and study notes are grouped in the [optional audit folder](reports/audit/2026-10-27/README.md).

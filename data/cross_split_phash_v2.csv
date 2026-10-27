@@ -1,0 +1,9 @@
+source_a,source_b,split_a,split_b,image_a,image_b,distance
+potholes263_png,355_jpg,train,test,potholes263_png.rf.79dd72dfafa60b2b022d36057891cea9.jpg,355_jpg.rf.5b5ce9ea0e882009f84d2cae3df26c33.jpg,4
+55_jpg,potholes641_png,train,test,55_jpg.rf.6cb9cdacad845bbc83375ae2101adf03.jpg,potholes641_png.rf.4483312a14ad8c92748057ea5c2954f9.jpg,4
+21_jpg,potholes618_png,train,test,21_jpg.rf.9e6ffad2a228077cb840ae800ac0e2af.jpg,potholes618_png.rf.238a9426c3e5e6d1135e47792ce03792.jpg,0
+potholes19_png,18_jpg,train,test,potholes19_png.rf.70cb59c1e547d6f79ec85049fd20cac3.jpg,18_jpg.rf.0b529fb857198125af8e3ec396cae79e.jpg,2
+potholes19_png,18_jpg,train,test,potholes19_png.rf.c9c4670b52e1bf1bb36567c6cd481c98.jpg,18_jpg.rf.2f53e5de78f37bc2da064ba97891c9dc.jpg,2
+10_jpg,potholes504_png,train,test,10_jpg.rf.27be1fcbf1edc25b626cfbf193263641.jpg,potholes504_png.rf.4633b38088985f578083ee44d4a414f9.jpg,2
+10_jpg,potholes504_png,train,test,10_jpg.rf.8d9f5bea5bf29dbe49a633bb9d6ab154.jpg,potholes504_png.rf.5ad6aaa6cdb4ae810732b13b9dd9900b.jpg,2
+10_jpg,potholes504_png,train,test,10_jpg.rf.8d9f5bea5bf29dbe49a633bb9d6ab154.jpg,potholes504_png.rf.a975845d7e750a3732c9ea9da3a74757.jpg,2

@@ -1,6 +1,6 @@
 # Design Notes
 
-**Chosen detector:** YOLO11 (nano/small variants)
+**Repository training choice:** YOLO11s (`yolo11s.pt`). Earlier nano/small wording describes alternatives, not verified comparison results. See [evidence review](../reports/audit/2026-10-27/REVIEW.md).
 
 ## 1. Background: what is YOLO?
 YOLO stands for "You Only Look Once". It is a family of deep learning models
@@ -55,4 +55,4 @@ most. We check this in our results.
 [4] Ultralytics, "YOLO11 vs. YOLO26," Ultralytics Docs (accessed Oct 2026).
     https://docs.ultralytics.com/compare/yolo11-vs-yolo26
 
-Dataset and license details: see CREDITS.md.
+Dataset metadata and declared license: see `data/1/README.roboflow.txt` and `data/1/data.yaml`. A standalone CREDITS.md is absent.

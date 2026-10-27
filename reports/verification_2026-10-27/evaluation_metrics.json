@@ -1,0 +1,30 @@
+{
+  "val": {
+    "precision": 0.7781258746066304,
+    "recall": 0.6654512306289881,
+    "mAP50": 0.7381969190726969,
+    "mAP50_95": 0.41527348726726687,
+    "speed_ms": {
+      "preprocess": 2.961502461335234,
+      "inference": 164.24564886668423,
+      "loss": 0.00011146667626841614,
+      "postprocess": 2.3673530213418417
+    },
+    "elapsed_seconds": 82.44547581672668,
+    "output_directory": "/home/mohamedekaden/3.2/AI/SemProject_MLEngine/SemProject_MLEngine/reports/verification_2026-10-27/reproduced_val"
+  },
+  "test": {
+    "precision": 0.7896610169430948,
+    "recall": 0.6794600217542208,
+    "mAP50": 0.7712250752691507,
+    "mAP50_95": 0.4840587143529828,
+    "speed_ms": {
+      "preprocess": 2.4087327073197584,
+      "inference": 152.61254205962683,
+      "loss": 7.225202880313918e-05,
+      "postprocess": 0.8965718428223983
+    },
+    "elapsed_seconds": 61.48075771331787,
+    "output_directory": "/home/mohamedekaden/3.2/AI/SemProject_MLEngine/SemProject_MLEngine/reports/verification_2026-10-27/reproduced_test"
+  }
+}
